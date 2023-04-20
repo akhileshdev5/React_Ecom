@@ -1,0 +1,299 @@
+@font-face {
+  font-family: "NunitoSans-Black";
+  src: url("../Font/NunitoSans-Black.ttf");
+  font-display: swap;
+  // font-weight: 700;
+}
+@font-face {
+  font-family: "NunitoSans-BlackItalic";
+  src: url("../Font/NunitoSans-BlackItalic.ttf");
+  font-display: swap;
+  // font-weight: 100;
+}
+@font-face {
+  font-family: "NunitoSans-Bold";
+  src: url("../Font/NunitoSans-Bold.ttf");
+  font-display: swap;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "NunitoSans-SemiBold";
+  src: url("../Font/NunitoSans-SemiBold.ttf");
+  font-display: swap;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "NunitoSans-Regular";
+  src: url("../Font/NunitoSans-Regular.ttf");
+  font-display: swap;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "NunitoSans-ExtraBold";
+  src: url("../Font/NunitoSans-ExtraBold.ttf");
+  font-display: swap;
+  font-weight: 900;
+}
+//   ================ Variables ==============================================================================
+$font-family: "NunitoSans-Regular", sans-serif;
+$font-family-bold: "NunitoSans-Bold", sans-serif;
+$font-family-semibold: "NunitoSans-SemiBold", sans-serif;
+$font-family-Extrabold: "NunitoSans-ExtraBold", sans-serif;
+$font-family-italic: "NunitoSans-BlackItalic", sans-serif;
+$font-size: 16px;
+$black: #000;
+$white: #fff;
+$breakpoint-xl: 1440px;
+$breakpoint-lg: 1200px;
+$breakpoint-md: 992px;
+$breakpoint-sm: 768px;
+$breakpoint-xsm: 300px;
+
+// ==============================================================================================================
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+body {
+  margin: 0;
+  font-family: $font-family;
+  line-height: 1;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-size: $font-size;
+}
+p,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  // color: $text-color-light;
+  line-height: 1.25;
+}
+a {
+  text-decoration: unset;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+p {
+  font-family: $font-family;
+  font-size: 1rem;
+  color: $white;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-track {
+  background-color: $white;
+}
+*::-webkit-scrollbar-thumb {
+  background: #ccc;
+  z-index: 111;
+}
+
+h1 {
+  font-family: $font-family-bold;
+  font-size: 2rem;
+  color: $white;
+}
+h2 {
+  font-family: $font-family-bold;
+  font-size: 1.8rem;
+  // color: $primary;
+}
+h3 {
+  font-family: $font-family-bold;
+  // color: $primary;
+  font-size: 1.6rem;
+}
+h4 {
+  font-family: $font-family-semibold;
+  // color: $primary;
+  font-size: 1.4rem;
+}
+h5 {
+  font-family: $font-family-semibold;
+  // color: $primary;
+  font-size: 1.2rem;
+}
+h6 {
+  font-family: $font-family-semibold;
+  // color: $primary;
+  font-size: 1rem;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none !important;
+  color: unset !important;
+}
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1140px;
+}
+img {
+  max-width: 100%;
+  height: 100%;
+}
+header {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  // box-shadow: 0 4px 12px rgb(0 0 0 / 25%);
+}
+footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  // box-shadow: 0 4px 12px rgb(0 0 0 / 25%);
+}
+.footer {
+  background: #1e1e1e;
+  color: $white;
+  padding: 30px;
+}
+
+.header {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: $white;
+  // background-color: red;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  .nav {
+    gap: 40px;
+    .nav-item {
+      &:hover {
+        font-family: $font-family-Extrabold;
+      }
+    }
+  }
+}
+
+.btn {
+  background: #ca4022 !important;
+  border-radius: 10px !important;
+  border: unset !important;
+  width: 199px;
+  height: 47px;
+  &:hover {
+    background: #e45737 !important;
+  }
+}
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 90px;
+  margin-top: 26px;
+  .left-content {
+    .nav {
+      gap: 5px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .middle-content {
+    p {
+      margin-bottom: 10px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+}
+
+.filter-container {
+  width: 150px;
+  color: $black;
+  .materials {
+    display: flex;
+    flex-direction: column;
+  }
+  .active {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+.content {
+  width: calc(100% - 150px);
+  height: 100%;
+}
+.product-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  .btn {
+    border: none;
+    background-color: transparent !important;
+    color: $white;
+    cursor: pointer;
+  }
+}
+
+.card-img-top:hover + .overlay {
+  display: flex;
+}
+
+.materials {
+  .active {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+.Menu-section {
+  .active {
+    font-family: $font-family-Extrabold;
+  }
+}
