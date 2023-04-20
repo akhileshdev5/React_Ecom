@@ -297,3 +297,8 @@ footer {
     font-family: $font-family-Extrabold;
   }
 }
+.button-action{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
